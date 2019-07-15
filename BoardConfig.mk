@@ -128,9 +128,6 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_USES_EASEL := true
 BOARD_USES_EASEL := true
 
-# Charger Mode
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 # ANT+
 #BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
