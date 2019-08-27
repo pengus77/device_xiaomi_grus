@@ -60,7 +60,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := kowalski_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
-  TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+  TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-androidkernel-
   TARGET_KERNEL_SOURCE := kernel/xiaomi/grus
   TARGET_KERNEL_VERSION := 4.9
   TARGET_KERNEL_CLANG_VERSION := 9.0.5
@@ -240,7 +240,7 @@ TARGET_USE_SDCLANG := true
 # Include SDCLANG definitions if it is requested and available
 ifeq ($(HOST_OS),linux)
     ifneq ($(wildcard vendor/qcom/sdclang/),)
-        include vendor/rr/build/core/sdllvm-lto-defs.mk
+        include vendor/lineage/build/core/sdllvm-lto-defs.mk
     endif
 endif
 
@@ -317,5 +317,3 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 BOARD_AVB_ENABLE := false
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
-# Inherit from the proprietary version
-#-include vendor/xiaomi/sdm710-common/BoardConfigVendor.mk
