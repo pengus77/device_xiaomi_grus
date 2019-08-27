@@ -8,5 +8,5 @@ cd "$workdir" || return
 # end patches
 
 
-add_lunch_combo rr_grus-eng
+add_lunch_combo lineage_grus-userdebug
 
