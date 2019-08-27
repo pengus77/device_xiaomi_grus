@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="bool" name="profile_supported_hfpclient" id="0x7f020000" />
+    <public type="bool" name="profile_supported_avrcp_controller" id="0x7f020001" />
+    <public type="bool" name="profile_supported_a2dp_sink" id="0x7f020002" />
+    <public type="bool" name="profile_supported_sap" id="0x7f020003" />
+    <public type="bool" name="profile_supported_ba" id="0x7f020004" />
+    <public type="bool" name="profile_supported_hid_device" id="0x7f020005" />
+</resources>
