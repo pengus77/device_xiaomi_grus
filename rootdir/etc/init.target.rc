@@ -42,12 +42,6 @@ on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
     mkdir /dev/logfs 0771 system system
 
-    chown system system /dev/hw_random
-    chmod 0666 /dev/hw_random
-
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_enable
-    chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_enable
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -118,13 +112,29 @@ on property:sys.boot_completed=1
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
 on boot
+    chown system system /dev/hw_random
+    chmod 0666 /dev/hw_random
+
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_enable
+    chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_enable
+
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_min
+    chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_min
+
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_elvss_off_treshold
+    chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_elvss_off_treshold
+
+    chown root system /sys/power/wake_lock
+    chown root system /sys/power/wake_unlock
+
     chown system system /sys/kernel/hbtp/display_pwr
     chown system system /sys/class/leds/white/brightness
     chown system system /sys/class/leds/white/blink
     chown system system /sys/class/drm/card0-DSI-1/disp_param
+
     start rmt_storage
     start rfs_access
-    # replace cpuset logic(CAUTION: set child cpuset.cpus firstly)
+
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-5
     write /dev/cpuset/background/cpus 0-1
@@ -148,8 +158,9 @@ on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/touch/tp_dev/fod_status
     chown system system /sys/class/touch/touch_dev/palm_sensor
-# Add a cpuset for the camera daemon
-# We want all cores for camera
+
+    # Add a cpuset for the camera daemon
+    # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
     write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/camera-daemon/mems 0
