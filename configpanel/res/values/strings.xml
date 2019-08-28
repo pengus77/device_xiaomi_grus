@@ -16,10 +16,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Flicker-free -->
-    <string name="flicker_free_settings_title">Flicker-free</string>
-    <string name="flicker_free_settings_summary">Avoid screen flicker on low brightness</string>
-    <string name="flicker_free_toggle_title">Avoid screen flicker on low brightness</string>
-    <string name="flicker_free_toggle_summary">May reduce image quality</string>
-
+     <!-- Flicker Free -->
+     <string name="flicker_free_settings_title">Flicker Free</string>
+     <string name="flicker_free_settings_summary">Avoid screen flicker on low brightness</string>
+     <string name="flicker_free_toggle_title">Avoid screen flicker on low brightness</string>
+     <string name="flicker_free_toggle_summary">May reduce image quality</string>
+     <string name="flicker_free_toggle_bri_title">Minimum brightness threshold</string>
+     <string name="flicker_free_toggle_bri_summary">Minimum brightness level below which the system will be enabled</string>
+     <string name="flicker_free_toggle_exp_title">Exposure multiplier</string>
+     <string name="flicker_free_toggle_exp_summary">The multiplier used to calculate the new exposure on low brightness</string>
 </resources>

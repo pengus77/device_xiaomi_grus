@@ -48,25 +48,25 @@ class Utils {
         }
     }
 
-    static boolean isPreferenceEnabled(Context context, String key) {
+    static boolean getPreferenceBool(Context context, String key) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         return preferences.getBoolean(key, (Boolean) Constants.sNodeDefaultMap.get(key));
     }
 
-    static String getPreferenceString(Context context, String key) {
+    static String getPreferenceInt(Context context, String key) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getString(key, (String) Constants.sNodeDefaultMap.get(key));
+        return String.valueOf(preferences.getInt(key, (Integer)Constants.sNodeDefaultMap.get(key)));
     }
 
     static void restoreNodePrefs(Context context) {
         String value, node;
         for (String pref : Constants.sFlickerFreePrefKeys) {
-            if (Constants.sStringNodePreferenceMap.containsKey(pref)) {
-                value = getPreferenceString(context, pref);
-                node = Constants.sStringNodePreferenceMap.get(pref);
-            } else if (Constants.sBooleanNodePreferenceMap.containsKey(pref)) {
-                value = isPreferenceEnabled(context, pref) ? "1" : "0";
+            if (Constants.sBooleanNodePreferenceMap.containsKey(pref)) {
+                value = getPreferenceBool(context, pref) ? "1" : "0";
                 node = Constants.sBooleanNodePreferenceMap.get(pref);
+            } else if (Constants.sIntNodePreferenceMap.containsKey(pref)) {
+                value = getPreferenceInt(context, pref);
+                node = Constants.sIntNodePreferenceMap.get(pref);
             } else {
                 continue;
             }

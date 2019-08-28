@@ -20,9 +20,16 @@ public class FlickerFreeConstants {
 
     // Preference keys
     static final String FLICKER_FREE_KEY = "flicker_free";
+    static final String FLICKER_FREE_EXP_KEY = "flicker_free_exp";
+    static final String FLICKER_FREE_BRI_KEY = "flicker_free_bri";
 
     // Flicker-free nodes
     static final String FLICKER_FREE_NODE =
             "/sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_enable";
 
+    static final String FLICKER_FREE_EXP_NODE =
+            "/sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_min";
+
+    static final String FLICKER_FREE_BRI_NODE =
+            "/sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_elvss_off_treshold";
 }

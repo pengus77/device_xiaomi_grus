@@ -23,13 +23,15 @@ class Constants {
 
     // Holds <preference_key> -> <proc_node> mapping
     static final Map<String, String> sBooleanNodePreferenceMap = new HashMap<>();
-    static final Map<String, String> sStringNodePreferenceMap = new HashMap<>();
-
+    static final Map<String, String> sIntNodePreferenceMap = new HashMap<>();
+    
     // Holds <preference_key> -> <default_values> mapping
     static final Map<String, Object> sNodeDefaultMap = new HashMap<>();
 
     static final String[] sFlickerFreePrefKeys = {
         FlickerFreeConstants.FLICKER_FREE_KEY,
+        FlickerFreeConstants.FLICKER_FREE_BRI_KEY,
+        FlickerFreeConstants.FLICKER_FREE_EXP_KEY,
     };
 
     static {
@@ -37,7 +39,16 @@ class Constants {
                 FlickerFreeConstants.FLICKER_FREE_KEY,
                 FlickerFreeConstants.FLICKER_FREE_NODE);
 
-        sNodeDefaultMap.put(FlickerFreeConstants.FLICKER_FREE_KEY, false);
-    }
+        sIntNodePreferenceMap.put(
+                    FlickerFreeConstants.FLICKER_FREE_EXP_KEY,
+                    FlickerFreeConstants.FLICKER_FREE_EXP_NODE);
 
+        sIntNodePreferenceMap.put(
+                FlickerFreeConstants.FLICKER_FREE_BRI_KEY,
+                FlickerFreeConstants.FLICKER_FREE_BRI_NODE);
+
+        sNodeDefaultMap.put(FlickerFreeConstants.FLICKER_FREE_KEY, false);
+        sNodeDefaultMap.put(FlickerFreeConstants.FLICKER_FREE_BRI_KEY, 40);
+        sNodeDefaultMap.put(FlickerFreeConstants.FLICKER_FREE_EXP_KEY, 255);
+    }
 }
