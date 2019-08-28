@@ -45,6 +45,9 @@ on init
     chown system system /dev/hw_random
     chmod 0666 /dev/hw_random
 
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_enable
+    chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display@18/msm_fb_ea_enable
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
