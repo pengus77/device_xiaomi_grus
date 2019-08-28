@@ -1260,9 +1260,7 @@ etc/dpm/dpm.conf
 -priv-app/CNEService/CNEService.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -priv-app/dpmserviceapp/dpmserviceapp.apk
--priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk
 -priv-app/WfdService/WfdService.apk
--priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk
 -priv-app/ims/ims.apk
 lib/vendor.qti.hardware.scve.objecttracker@1.0.so
 lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
