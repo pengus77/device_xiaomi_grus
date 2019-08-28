@@ -27,12 +27,6 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# ADB
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.sys.usb.config=adb \
-    ro.adb.secure=0 \
-    ro.secure=0
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -217,10 +211,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
 
-# Custom Doze
-PRODUCT_PACKAGES += \
-    CustomDoze
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -292,10 +282,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Media
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
-
-# Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
@@ -312,8 +298,6 @@ PRODUCT_COPY_FILES += \
 
 # Net
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.0 \
-    libandroid_net \
     netutils-wrapper-1.0
 
 # OMX
@@ -337,9 +321,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service \
-    power.qcom
+    power.qcom:64
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -446,9 +428,7 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 PRODUCT_BOOT_JARS += \
-    WfdCommon \
-    QPerformance \
-    UxPerformance
+    WfdCommon
 
 # Input
 PRODUCT_COPY_FILES += \
