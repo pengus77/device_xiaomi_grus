@@ -85,7 +85,6 @@
             <name>IContexthub</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IContexthub/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.drm</name>
