@@ -321,7 +321,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom:64
+    android.hardware.power@1.2-service.xiaomi_grus
 
 # QTI
 PRODUCT_COPY_FILES += \

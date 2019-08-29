@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -194,70 +194,14 @@ static int process_video_encode_hint(void* metadata) {
 }
 
 static int process_activity_launch_hint(void* data) {
-    static int launch_handle = -1;
-    static int launch_mode = 0;
-
-    // release lock early if launch has finished
-    if (!data) {
-        if (CHECK_HANDLE(launch_handle)) {
-            release_request(launch_handle);
-            launch_handle = -1;
-        }
-        launch_mode = 0;
-        return HINT_HANDLED;
-    }
-
-    if (current_mode != NORMAL_MODE) {
-        ALOGV("%s: ignoring due to other active perf hints", __func__);
-    } else if (!launch_mode) {
-        launch_handle = perf_hint_enable_with_type(VENDOR_HINT_FIRST_LAUNCH_BOOST,
-                kMaxLaunchDuration, LAUNCH_BOOST_V1);
-        if (!CHECK_HANDLE(launch_handle)) {
-            ALOGE("Failed to perform launch boost");
-            return HINT_NONE;
-        }
-        launch_mode = 1;
-    }
-    return HINT_HANDLED;
+    return HINT_HANDLED; /* Don't excecute this code path, not in use */
 }
 
 static int process_interaction_hint(void* data) {
-    static struct timespec s_previous_boost_timespec;
-    static int s_previous_duration = 0;
-
-    struct timespec cur_boost_timespec;
-    long long elapsed_time;
-    int duration = kMinInteractiveDuration;
-
-    if (current_mode != NORMAL_MODE) {
-        ALOGV("%s: ignoring due to other active perf hints", __func__);
-        return HINT_HANDLED;
-    }
-
-    if (data) {
-        int input_duration = *((int*)data);
-        if (input_duration > duration) {
-            duration = (input_duration > kMaxInteractiveDuration) ?
-                    kMaxInteractiveDuration : input_duration;
-        }
-    }
-
-    clock_gettime(CLOCK_MONOTONIC, &cur_boost_timespec);
-
-    elapsed_time = calc_timespan_us(s_previous_boost_timespec, cur_boost_timespec);
-    // don't hint if previous hint's duration covers this hint's duration
-    if ((s_previous_duration * 1000) > (elapsed_time + duration * 1000)) {
-        return HINT_HANDLED;
-    }
-    s_previous_boost_timespec = cur_boost_timespec;
-    s_previous_duration = duration;
-
-    perf_hint_enable_with_type(VENDOR_HINT_SCROLL_BOOST, duration, SCROLL_VERTICAL);
-
-    return HINT_HANDLED;
+    return HINT_HANDLED; /* Don't excecute this code path, not in use */
 }
 
-int power_hint_override(struct power_module* module, power_hint_t hint, void* data) {
+int power_hint_override(power_hint_t hint, void* data) {
     int ret_val = HINT_NONE;
     switch (hint) {
         case POWER_HINT_VIDEO_ENCODE:
@@ -281,11 +225,6 @@ int power_hint_override(struct power_module* module, power_hint_t hint, void* da
     return ret_val;
 }
 
-int set_interactive_override(struct power_module* module, int on) {
-    static int set_i_count = 0;
-
-    set_i_count++;
-    ALOGI("Got set_interactive hint on= %d, count= %d\n", on, set_i_count);
-
+int set_interactive_override(int on) {
     return HINT_HANDLED; /* Don't excecute this code path, not in use */
 }
