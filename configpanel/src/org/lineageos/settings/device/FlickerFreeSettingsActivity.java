@@ -27,12 +27,14 @@ public class FlickerFreeSettingsActivity extends PreferenceActivity {
         return FlickerFreeUtils.isSupported();
     }
 
-    static void restoreState(Context context) {
-        if (isSupported()) {
+    static boolean restoreState(Context context) {
+        boolean enabled = isSupported();
+        if (enabled) {
             Utils.enableComponent(context, FlickerFreeSettingsActivity.class);
         } else {
             Utils.disableComponent(context, FlickerFreeSettingsActivity.class);
         }
+        return enabled;
     }
 
     @Override

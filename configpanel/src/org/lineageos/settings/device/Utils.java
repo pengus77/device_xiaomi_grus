@@ -23,11 +23,11 @@ import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.xiaomi.settings.device.utils.FileUtils;
+import org.lineageos.settings.device.utils.FileUtils;
 
 class Utils {
 
-    private static final String TAG = "Utils";
+    private static final String TAG = "FlickerFreeUtils";
 
     static void disableComponent(Context context, Class cls) {
         ComponentName name = new ComponentName(context, cls);
@@ -48,32 +48,34 @@ class Utils {
         }
     }
 
-    static boolean getPreferenceBool(Context context, String key) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+    static boolean getPreferenceBool(SharedPreferences preferences, String key) {
         return preferences.getBoolean(key, (Boolean) Constants.sNodeDefaultMap.get(key));
     }
 
-    static String getPreferenceInt(Context context, String key) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+    static String getPreferenceInt(SharedPreferences preferences, String key) {
         return String.valueOf(preferences.getInt(key, (Integer)Constants.sNodeDefaultMap.get(key)));
     }
 
     static void restoreNodePrefs(Context context) {
         String value, node;
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         for (String pref : Constants.sFlickerFreePrefKeys) {
             if (Constants.sBooleanNodePreferenceMap.containsKey(pref)) {
-                value = getPreferenceBool(context, pref) ? "1" : "0";
+                value = getPreferenceBool(preferences, pref) ? "1" : "0";
                 node = Constants.sBooleanNodePreferenceMap.get(pref);
             } else if (Constants.sIntNodePreferenceMap.containsKey(pref)) {
-                value = getPreferenceInt(context, pref);
+                value = getPreferenceInt(preferences, pref);
                 node = Constants.sIntNodePreferenceMap.get(pref);
             } else {
                 continue;
             }
 
             if (!FileUtils.writeLine(node, value)) {
-                Log.w(TAG, "Write to node " + node +
-                    " failed while restoring saved preference values");
+                Log.e(TAG, "Write to node " + node +
+                    " failed while restoring saved preference value -> " + pref + ": " + value);
+            } else {
+                Log.i(TAG, "Write to node " + node +
+                    " succedeed while restoring saved preference value -> " + pref + ": " + value);
             }
         }
     }

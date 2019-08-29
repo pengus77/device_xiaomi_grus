@@ -16,7 +16,7 @@
 
 package org.lineageos.settings.device;
 
-import com.xiaomi.settings.device.utils.FileUtils;
+import org.lineageos.settings.device.utils.FileUtils;
 
 class FlickerFreeUtils {
 

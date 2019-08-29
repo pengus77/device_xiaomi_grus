@@ -22,12 +22,13 @@ import android.content.Intent;
 
 public class Startup extends BroadcastReceiver {
 
+    private boolean initialized = false;
+
     @Override
     public void onReceive(final Context context, final Intent intent) {
-        final String action = intent.getAction();
-        if (Intent.ACTION_BOOT_COMPLETED.equals(action) || Intent.ACTION_PRE_BOOT_COMPLETED.equals(action)) {
-            FlickerFreeSettingsActivity.restoreState(context);
+        if (!initialized && FlickerFreeSettingsActivity.restoreState(context)) {
             Utils.restoreNodePrefs(context);
+            initialized = true;
         }
     }
 

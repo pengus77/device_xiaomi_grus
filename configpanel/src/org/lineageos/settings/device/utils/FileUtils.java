@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.xiaomi.settings.device.utils;
+package org.lineageos.settings.device.utils;
 
 import android.util.Log;
 

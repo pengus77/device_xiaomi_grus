@@ -23,9 +23,8 @@ import android.support.v7.preference.SeekBarPreference;
 import android.support.v7.preference.Preference;
 import android.text.TextUtils;
 import android.view.MenuItem;
-import android.util.Log;
 
-import com.xiaomi.settings.device.utils.FileUtils;
+import org.lineageos.settings.device.utils.FileUtils;
 
 public abstract class NodePreferenceFragment extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -40,7 +39,6 @@ public abstract class NodePreferenceFragment extends PreferenceFragment
         }
         node = Constants.sIntNodePreferenceMap.get(preference.getKey());
         if (!TextUtils.isEmpty(node) && FileUtils.isFileWritable(node)) {
-            Log.i(this.getClass().getName(), node + " , " + newValue);
             FileUtils.writeLine(node, String.valueOf(newValue));
             return true;
         }

@@ -17,11 +17,8 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
-import android.util.Log;
 
 public class FlickerFreeSettingsFragment extends NodePreferenceFragment {
-
-    private static final String TAG = "FlickerFreeSettingsFragment";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
