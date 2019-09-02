@@ -31,6 +31,7 @@
 #define ANDROID_HARDWARE_POWER_V1_2_POWER_H
 
 #include <android/hardware/power/1.2/IPower.h>
+#include <vendor/lineage/power/1.0/ILineagePower.h>
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 #include <hardware/power.h>
@@ -47,11 +48,14 @@ using PowerHint_1_2 = ::android::hardware::power::V1_2::PowerHint;
 using ::android::hardware::power::V1_2::IPower;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
+using ::vendor::lineage::power::V1_0::ILineagePower;
+using ::vendor::lineage::power::V1_0::LineageFeature;
 
-struct Power : public IPower {
+struct Power : public IPower, public ILineagePower {
     // Methods from ::android::hardware::power::V1_0::IPower follow.
 
     Power();
+    status_t registerAsSystemService();
 
     Return<void> setInteractive(bool interactive) override;
     Return<void> powerHint(PowerHint_1_0 hint, int32_t data) override;
@@ -63,6 +67,9 @@ struct Power : public IPower {
     Return<void> powerHintAsync(PowerHint_1_0 hint, int32_t data) override;
     // Methods from ::android::hardware::power::V1_2::IPower follow
     Return<void> powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) override;
+
+    // Methods from ::vendor::lineage::power::V1_0::ILineagePower follow.
+    Return<int32_t> getFeature(LineageFeature feature) override;
 };
 
 }  // namespace implementation

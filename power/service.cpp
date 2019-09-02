@@ -49,7 +49,7 @@ using android::hardware::power::V1_2::implementation::Power;
 int main() {
 
     status_t status;
-    android::sp<IPower> service = nullptr;
+    android::sp<Power> service = nullptr;
 
     ALOGI("Power HAL Service 1.2 is starting.");
 
@@ -62,7 +62,7 @@ int main() {
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    status = service->registerAsService();
+    status = service->registerAsSystemService();
     if (status != OK) {
         ALOGE("Could not register service for Power HAL(%d).", status);
         goto shutdown;

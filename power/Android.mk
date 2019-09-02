@@ -29,6 +29,7 @@ LOCAL_C_INCLUDES := external/libxml2/include \
 
 LOCAL_SHARED_LIBRARIES := \
     android.hardware.power@1.2 \
+    vendor.lineage.power@1.0 \
     libbase \
     libcutils \
     libdl \
@@ -36,7 +37,7 @@ LOCAL_SHARED_LIBRARIES := \
     libhidltransport \
     liblog \
     libutils \
-    libxml2
+    libxml2 
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_HEADER_LIBRARIES += libutils_headers

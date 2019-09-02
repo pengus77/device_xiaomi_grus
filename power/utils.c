@@ -46,10 +46,14 @@
 #define USINSEC 1000000L
 #define NSINUS 1000L
 
-char scaling_gov_path[4][80] = {"sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
+char scaling_gov_path[8][80] = {"sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
                                 "sys/devices/system/cpu/cpu1/cpufreq/scaling_governor",
                                 "sys/devices/system/cpu/cpu2/cpufreq/scaling_governor",
-                                "sys/devices/system/cpu/cpu3/cpufreq/scaling_governor"};
+                                "sys/devices/system/cpu/cpu3/cpufreq/scaling_governor",
+                                "sys/devices/system/cpu/cpu4/cpufreq/scaling_governor",
+                                "sys/devices/system/cpu/cpu5/cpufreq/scaling_governor",
+                                "sys/devices/system/cpu/cpu6/cpufreq/scaling_governor",
+                                "sys/devices/system/cpu/cpu7/cpufreq/scaling_governor"};
 
 #define PERF_HAL_PATH "libqti-perfd-client.so"
 static void* qcopt_handle;
@@ -202,8 +206,7 @@ void interaction(int duration, int num_args, int opt_list[]) {
 
     if (qcopt_handle) {
         if (perf_lock_acq) {
-            lock_handle = perf_lock_acq(lock_handle, duration, opt_list, num_args);
-            if (lock_handle == -1) ALOGE("Failed to acquire lock.");
+            perf_lock_acq(lock_handle, duration, opt_list, num_args);
         }
     }
 #endif
@@ -225,14 +228,11 @@ int interaction_with_handle(int lock_handle, int duration, int num_args, int opt
 // perf_lock_acq
 int perf_hint_enable(int hint_id, int duration) {
     int lock_handle = 0;
-
     if (duration < 0) return 0;
 
     if (qcopt_handle) {
         if (perf_hint) {
             lock_handle = perf_hint(hint_id, NULL, duration, -1);
-            if (lock_handle == -1)
-                ALOGE("Failed to acquire lock for hint_id: %X.", hint_id);
         }
     }
     return lock_handle;
@@ -245,7 +245,6 @@ int perf_hint_enable_with_type(int hint_id, int duration, int type) {
     if (qcopt_handle) {
         if (perf_hint) {
             lock_handle = perf_hint(hint_id, NULL, duration, type);
-            if (lock_handle == -1) ALOGE("Failed to acquire lock.");
         }
     }
     return lock_handle;

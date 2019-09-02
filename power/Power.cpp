@@ -31,6 +31,7 @@
 
 #include <android/log.h>
 #include <utils/Log.h>
+#include <vendor/lineage/power/1.0/ILineagePower.h>
 #include "Power.h"
 #include "power-common.h"
 
@@ -48,6 +49,8 @@ using ::android::hardware::power::V1_1::PowerStateSubsystem;
 using ::android::hardware::hidl_vec;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
+using ::vendor::lineage::power::V1_0::ILineagePower;
+using ::vendor::lineage::power::V1_0::LineageFeature;
 
 Power::Power() {
     power_init();
@@ -68,6 +71,44 @@ Return<void> Power::setFeature(Feature feature, bool activate)  {
     set_feature(static_cast<feature_t>(feature), activate ? 1 : 0);
     return Void();
 }
+
+Return<int32_t> Power::getFeature(LineageFeature feature)  {
+    switch (feature) {
+    case LineageFeature::SUPPORTED_PROFILES:
+        ALOGW("working on it. will have lineage profiles support soon: %d\n", feature);
+	return -1;
+	// @pengus77: working on it. will have lineage profiles support soon.
+        break;
+    default:
+        ALOGW("Error getting the feature, it doesn't exist %d\n", feature);
+        return -1;
+        break;
+    }
+}
+
+status_t Power::registerAsSystemService() {
+    status_t ret = 0;
+
+    ret = IPower::registerAsService();
+    if (ret != 0) {
+        ALOGE("Failed to register IPower (%d)", ret);
+        goto fail;
+    } else {
+        ALOGI("Successfully registered IPower");
+    }
+
+    ret = ILineagePower::registerAsService();
+    if (ret != 0) {
+        ALOGE("Failed to register ILineagePower (%d)", ret);
+        goto fail;
+    } else {
+        ALOGI("Successfully registered ILineagePower");
+    }
+
+fail:
+    return ret;
+}
+
 
 Return<void> Power::getPlatformLowPowerStats(getPlatformLowPowerStats_cb _hidl_cb) {
 
