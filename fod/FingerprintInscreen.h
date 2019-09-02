@@ -33,9 +33,9 @@ using ::android::hardware::Return;
 using ::android::hardware::Void;
 using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
 
-#define FOD_POS_X 465
-#define FOD_POS_Y 1955
-#define FOD_SIZE 150
+#define FOD_POS_X 448
+#define FOD_POS_Y 1938
+#define FOD_SIZE 184
 
 class FingerprintInscreen : public IFingerprintInscreen {
 public:

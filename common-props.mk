@@ -129,5 +129,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # FP
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.fp.fod=true \
-    persist.vendor.sys.fp.fod.location.X_Y=465,1955 \
-    persist.vendor.sys.fp.fod.size.width_height=150,150
+    persist.vendor.sys.fp.fod.location.X_Y=448,1938 \
+    persist.vendor.sys.fp.fod.size.width_height=184,184
