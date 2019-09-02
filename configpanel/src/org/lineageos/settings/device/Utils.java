@@ -25,11 +25,11 @@ import android.util.Log;
 
 import org.lineageos.settings.device.utils.FileUtils;
 
-class Utils {
+public class Utils {
 
-    private static final String TAG = "FlickerFreeUtils";
+    private static final String TAG = "FlickerFree - Utils";
 
-    static void disableComponent(Context context, Class cls) {
+    protected static void disableComponent(Context context, Class cls) {
         ComponentName name = new ComponentName(context, cls);
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(name,
@@ -37,7 +37,7 @@ class Utils {
                 PackageManager.DONT_KILL_APP);
     }
 
-    static void enableComponent(Context context, Class cls) {
+    protected static void enableComponent(Context context, Class cls) {
         ComponentName name = new ComponentName(context, cls);
         PackageManager pm = context.getPackageManager();
         if (pm.getComponentEnabledSetting(name)
@@ -56,7 +56,7 @@ class Utils {
         return String.valueOf(preferences.getInt(key, (Integer)Constants.sNodeDefaultMap.get(key)));
     }
 
-    static void restoreNodePrefs(Context context) {
+    protected static void restoreNodePrefs(Context context) {
         String value, node;
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         for (String pref : Constants.sFlickerFreePrefKeys) {

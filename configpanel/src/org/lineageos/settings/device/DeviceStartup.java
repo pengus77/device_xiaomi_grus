@@ -19,16 +19,18 @@ package org.lineageos.settings.device;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
-public class Startup extends BroadcastReceiver {
+public class DeviceStartup extends BroadcastReceiver {
 
-    private boolean initialized = false;
+    private static final String TAG = "FlickerFree - DeviceStartup";
 
     @Override
     public void onReceive(final Context context, final Intent intent) {
-        if (!initialized && FlickerFreeSettingsActivity.restoreState(context)) {
-            Utils.restoreNodePrefs(context);
-            initialized = true;
+        Log.i(TAG, intent.getAction().toString());
+        if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
+            if (FlickerFreeSettingsActivity.restoreState(context))
+                Utils.restoreNodePrefs(context);
         }
     }
 

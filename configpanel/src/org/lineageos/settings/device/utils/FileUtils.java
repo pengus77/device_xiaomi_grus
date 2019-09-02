@@ -27,7 +27,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public final class FileUtils {
-    private static final String TAG = "FileUtils";
+    private static final String TAG = "FlickerFree - FileUtils";
 
     private FileUtils() {
         // This class is not supposed to be instantiated
@@ -60,6 +60,8 @@ public final class FileUtils {
             }
         }
 
+        Log.i(TAG, "Red '" + line + "' from file '" + fileName + "'");
+
         return line;
     }
 
@@ -89,6 +91,8 @@ public final class FileUtils {
                 // Ignored, not much we can do anyway
             }
         }
+
+        Log.i(TAG, "wrote '" + value + "' to file '" + fileName + "'");
 
         return true;
     }

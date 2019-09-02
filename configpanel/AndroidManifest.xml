@@ -18,7 +18,7 @@
     package="org.lineageos.settings.device"
     android:sharedUserId="android.uid.system">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:icon="@mipmap/ic_launcher_settings"
@@ -41,10 +41,10 @@
                 android:resource="@string/flicker_free_settings_summary" />
         </activity>
 
-        <receiver android:name=".Startup" >
+        <receiver android:name=".DeviceStartup" android:enabled="true">
             <intent-filter>
-                <action android:name="android.intent.action.USER_INITIALIZE"/>
-                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 

@@ -23,12 +23,8 @@ import android.preference.PreferenceActivity;
 
 public class FlickerFreeSettingsActivity extends PreferenceActivity {
 
-    static boolean isSupported() {
-        return FlickerFreeUtils.isSupported();
-    }
-
-    static boolean restoreState(Context context) {
-        boolean enabled = isSupported();
+    protected static boolean restoreState(Context context) {
+        boolean enabled = FlickerFreeUtils.isSupported();
         if (enabled) {
             Utils.enableComponent(context, FlickerFreeSettingsActivity.class);
         } else {

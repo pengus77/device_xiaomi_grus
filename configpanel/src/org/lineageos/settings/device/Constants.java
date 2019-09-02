@@ -19,16 +19,16 @@ package org.lineageos.settings.device;
 import java.util.HashMap;
 import java.util.Map;
 
-class Constants {
+public class Constants {
 
     // Holds <preference_key> -> <proc_node> mapping
-    static final Map<String, String> sBooleanNodePreferenceMap = new HashMap<>();
-    static final Map<String, String> sIntNodePreferenceMap = new HashMap<>();
-    
-    // Holds <preference_key> -> <default_values> mapping
-    static final Map<String, Object> sNodeDefaultMap = new HashMap<>();
+    protected static final Map<String, String> sBooleanNodePreferenceMap = new HashMap<>();
+    protected static final Map<String, String> sIntNodePreferenceMap = new HashMap<>();
 
-    static final String[] sFlickerFreePrefKeys = {
+    // Holds <preference_key> -> <default_values> mapping
+    protected static final Map<String, Object> sNodeDefaultMap = new HashMap<>();
+
+    protected static final String[] sFlickerFreePrefKeys = {
         FlickerFreeConstants.FLICKER_FREE_KEY,
         FlickerFreeConstants.FLICKER_FREE_BRI_KEY,
         FlickerFreeConstants.FLICKER_FREE_EXP_KEY,

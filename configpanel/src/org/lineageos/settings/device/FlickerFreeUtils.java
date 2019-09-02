@@ -18,7 +18,7 @@ package org.lineageos.settings.device;
 
 import org.lineageos.settings.device.utils.FileUtils;
 
-class FlickerFreeUtils {
+public class FlickerFreeUtils {
 
     static boolean isSupported() {
         return FileUtils.fileExists(FlickerFreeConstants.FLICKER_FREE_NODE);
