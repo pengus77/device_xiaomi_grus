@@ -748,7 +748,7 @@ vendor/etc/gpfspath_oem_config.xml
 vendor/etc/cs35l41_cal.wav
 vendor/etc/cirrus.cfg
 vendor/etc/spk_cal_sweep.wav
-vendor/etc/powerhint.xml
+vendor/etc/powerhint.json
 vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml
 vendor/etc/camera/body_slim_ui9_params.config
 vendor/etc/camera/model_back.dlc
