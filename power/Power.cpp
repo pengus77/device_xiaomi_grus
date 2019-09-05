@@ -31,10 +31,12 @@
 #include "power-helper.h"
 
 #include <linux/input.h>
+#include <hardware/power.h>
 
 /* RPM runs at 19.2Mhz. Divide by 19200 for msec */
 #define RPM_CLK 19200
 
+#define TAP_TO_WAKE_NODE "/dev/input/event2"
 #define INPUT_EVENT_WAKUP_MODE_OFF 4
 #define INPUT_EVENT_WAKUP_MODE_ON 5
 
@@ -116,15 +118,16 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
     return Void();
 }
 
-Return<void> Power::setFeature(Feature feature, bool /*activate*/)  {
-    switch (feature) {
+Return<void> Power::setFeature(Feature feature, bool activate)  {
+    feature_t feat = static_cast<feature_t>(feature);
+    switch (feat) {
 #ifdef TAP_TO_WAKE_NODE
         case POWER_FEATURE_DOUBLE_TAP_TO_WAKE: {
             int fd = open(TAP_TO_WAKE_NODE, O_RDWR);
             struct input_event ev; 
             ev.type = EV_SYN;
             ev.code = SYN_CONFIG;
-            ev.value = state ? INPUT_EVENT_WAKUP_MODE_ON : INPUT_EVENT_WAKUP_MODE_OFF;
+            ev.value = activate ? INPUT_EVENT_WAKUP_MODE_ON : INPUT_EVENT_WAKUP_MODE_OFF;
             write(fd, &ev, sizeof(ev));
             close(fd);
         } break;

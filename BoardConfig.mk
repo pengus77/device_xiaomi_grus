@@ -222,7 +222,6 @@ TARGET_PROVIDES_LIBLIGHT := false
 
 # Power
 TARGET_HAS_NO_WLAN_STATS := true
-TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
 
 # Camera
 TARGET_FACE_UNLOCK_CAMERA_ID := 1
