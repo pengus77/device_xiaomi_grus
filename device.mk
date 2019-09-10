@@ -268,7 +268,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sdm710
+    android.hardware.light@2.0-service.grus
 
 # IPACM
 PRODUCT_PACKAGES += \
