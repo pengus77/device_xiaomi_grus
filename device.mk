@@ -455,8 +455,8 @@ PRODUCT_PACKAGES += \
     nfc_nci.nqx.default.hw
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/libnfc-nci.conf:system/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+    $(LOCAL_PATH)/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # Bluetooth
 #PRODUCT_PACKAGES += \
