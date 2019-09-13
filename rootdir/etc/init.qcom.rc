@@ -805,12 +805,13 @@ service fstman_wlan0 /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini 
     disabled
     oneshot
 
-#service vendor.chre /vendor/bin/chre
-#    class late_start
-#    user system
-#    group system
-#    socket chre seqpacket 0660 root system
-#    shutdown critical
+service vendor.chre /vendor/bin/chre
+    class late_start
+    user system
+    group system
+    socket chre seqpacket 0660 root system
+    shutdown critical
+    disabled
 
 service wigighalsvc /vendor/bin/wigighalsvc
     interface vendor.qti.hardware.wigig.supptunnel@1.0::ISuppTunnelProvider default
