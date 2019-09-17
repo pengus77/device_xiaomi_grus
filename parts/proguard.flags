@@ -3,6 +3,8 @@
 }
 
 -keep class ** extends android.support.v14.preference.PreferenceFragment
--keep class org.lineageos.settings.doze.* {
+
+-keep class org.lineageos.settings.dirac.* {
   *;
 }
+
