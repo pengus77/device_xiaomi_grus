@@ -434,10 +434,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
-# xiaomi doze
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
@@ -475,10 +471,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library
-
-# dirac app
-PRODUCT_PACKAGES += \
-    Dirac
 
 # Config panel
 PRODUCT_PACKAGES += \

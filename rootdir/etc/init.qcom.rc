@@ -463,7 +463,6 @@ service vendor.contexthub-hal-1-0 /vendor/bin/hw/android.hardware.contexthub@1.0
     interface android.hardware.contexthub@1.0::IContexthub default
     user system
     group system
-    disabled
 
 service qcomsysd /system/vendor/bin/qcom-system-daemon
     class main
@@ -811,7 +810,6 @@ service vendor.chre /vendor/bin/chre
     group system
     socket chre seqpacket 0660 root system
     shutdown critical
-    disabled
 
 service wigighalsvc /vendor/bin/wigighalsvc
     interface vendor.qti.hardware.wigig.supptunnel@1.0::ISuppTunnelProvider default

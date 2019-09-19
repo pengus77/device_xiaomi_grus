@@ -1,3 +1,1 @@
-require version-modem=2019-02-13 23:02:56
-require version-vendor=1550219708,28
-require version-miui=9.2.15
+require version-baseband=MPSS.AT.4.0.2-00530-SDM710_GEN_PACK-1.183979.1,10.3.4.0

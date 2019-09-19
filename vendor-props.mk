@@ -91,4 +91,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.max.brightness=0 \
     sys.haptic.down.weak=3 \
     sys.haptic.down.normal=8 \
-    sys.haptic.down.strong=18
+    sys.haptic.down.strong=18 \
+    persist.vendor.sys.ssr.enable_debug=0
