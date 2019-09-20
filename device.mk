@@ -161,6 +161,11 @@ PRODUCT_PACKAGES += \
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
+    gralloc.sdm710 \
+    memtrack.sdm710 \
+    thermal.sdm710 \
+    hwcomposer.sdm710 \
+    lights.sdm710 \
     android.frameworks.displayservice@1.0 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
@@ -303,18 +308,18 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
-    libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libc2dcolorconvert \
-    libmm-omxcore \
-    libstagefrighthw \
-    libplatformconfig
+    libOmxG711Enc \
+    libplatformconfig \
+    libstagefrighthw
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
