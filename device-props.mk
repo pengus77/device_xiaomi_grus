@@ -10,7 +10,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.multicam.fpsmatch=TRUE \
     persist.vendor.camera.enableAdvanceFeatures=0x3E7 \
     persist.vendor.camera.multicam.framesync=1 \
-    persist.vendor.camera.multicam=TRUE
+    persist.vendor.camera.multicam=TRUE \
+    persist.vendor.camera.HAL3.enabled=1
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -85,7 +86,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.wlan.chip=39xx \
 	ro.wlan.mimo=1 \
 	persist.vendor.btstack.enable.splita2dp=true \
-	persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+	persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxws-aptxhd-aac-ldac-aptxadaptive \
 	media.stagefright.enable-player=true \
 	media.stagefright.enable-http=true \
 	media.stagefright.enable-aac=true \
