@@ -28,7 +28,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.dev_name=rmnet_usb0 \
     persist.vendor.data.profile_update=true \
     persist.vendor.data.mode=concurrent \
-    ro.vendor.use_data_netmgrd=true
+    ro.vendor.use_data_netmgrd=true \
+    persist.data.netmgrd.qos.enable=true
 
 # Display density
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -42,7 +43,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.eyecare.brightness.threshold=15 \
     ro.eyecare.brightness.level=8 \
     ro.hist.brightness.threshold=7 \
-    ro.whitepoint_calibration_enable=true
+    ro.whitepoint_calibration_enable=true \
+    sys.autobrightness_optimize=true
 
 # Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -62,6 +64,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.video=true
+
+# IZat
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.overlay.izat.optin=rro
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \

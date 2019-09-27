@@ -167,8 +167,6 @@ PRODUCT_PACKAGES += \
     thermal.sdm710 \
     hwcomposer.sdm710 \
     android.frameworks.displayservice@1.0 \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
@@ -178,7 +176,13 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libtinyxml \
     libvulkan \
-    vendor.display.config@1.7
+    vendor.display.config@1.7 \
+    vendor.qti.hardware.display.allocator@1.0-service
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+    
 
 # DRM
 PRODUCT_PACKAGES += \
