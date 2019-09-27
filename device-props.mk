@@ -42,7 +42,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.force_burn_in=true \
     persist.sys.sf.native_mode=0 \
     persist.sys.sf.color_saturation=1.0 \
-    vendor.display.dataspace_saturation_matrix=1.16868,-0.03155,-0.01473,-0.16868,1.03155,-0.05899,0.00000,0.00000,1.07372
+    vendor.display.dataspace_saturation_matrix=1.16868,-0.03155,-0.01473,-0.16868,1.03155,-0.05899,0.00000,0.00000,1.07372 \
+    vendor.livedisplay.enable_sdm_dm=true
 
 # Bunch of props from MIUI need to review
 PRODUCT_PROPERTY_OVERRIDES += \
