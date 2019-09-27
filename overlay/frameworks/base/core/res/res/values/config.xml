@@ -1153,15 +1153,6 @@
     <!-- Whether the device has fingeprint sensor or not -->
     <bool name="config_hasFingerprintSensor">true</bool>
 
-    <bool name="config_filterDisplayModes">true</bool>
-
-    <!-- List supported color modes. -->
-    <integer-array name="config_availableColorModes">
-        <item>0</item> <!-- COLOR_MODE_NATURAL -->
-        <item>1</item> <!-- COLOR_MODE_BOOSTED -->
-        <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
-    </integer-array>
-
     <bool name="config_setColorTransformAccelerated">true</bool>
 
     <bool name="config_enableAutoPowerModes">true</bool>
