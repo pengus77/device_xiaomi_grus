@@ -166,7 +166,6 @@ PRODUCT_PACKAGES += \
     memtrack.sdm710 \
     thermal.sdm710 \
     hwcomposer.sdm710 \
-    lights.sdm710 \
     android.frameworks.displayservice@1.0 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
@@ -179,12 +178,8 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libtinyxml \
     libvulkan \
-    vendor.display.config@1.0.vendor \
-    vendor.display.config@1.1.vendor \
-    vendor.display.config@1.2.vendor \
-    vendor.display.config@1.3.vendor \
-    vendor.display.config@1.4.vendor \
-    vendor.display.config@1.5.vendor
+    vendor.display.config@1.7 \
+    vendor.display.config@1.7.vendor
 
 # DRM
 PRODUCT_PACKAGES += \

@@ -39,9 +39,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.displayfeature_hidl=true \
     sys.displayfeature.hbm.enable=true \
     ro.displayfeature.histogram.enable=true \
-    ro.eyecare.brightness.threshold=7 \
-    ro.eyecare.brightness.level=5 \
-    ro.hist.brightness.threshold=7
+    ro.eyecare.brightness.threshold=15 \
+    ro.eyecare.brightness.level=8 \
+    ro.hist.brightness.threshold=7 \
+    ro.whitepoint_calibration_enable=true
 
 # Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -72,8 +73,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.core_ctl_min_cpu=4 \
-    ro.vendor.qti.core_ctl_max_cpu=6 \
+    ro.vendor.qti.core_ctl_min_cpu=2 \
+    ro.vendor.qti.core_ctl_max_cpu=4 \
     vendor.iop.enable_prefetch_ofr=0 \
     vendor.iop.enable_uxe=0 \
     persist.vendor.perfservice.disable=1

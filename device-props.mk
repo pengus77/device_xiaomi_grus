@@ -39,7 +39,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.display.type=oled \
-    persist.debug.force_burn_in=true
+    persist.debug.force_burn_in=true \
+    persist.sys.sf.native_mode=0 \
+    persist.sys.sf.color_saturation=1.0 \
+    vendor.display.dataspace_saturation_matrix=1.16868,-0.03155,-0.01473,-0.16868,1.03155,-0.05899,0.00000,0.00000,1.07372
 
 # Bunch of props from MIUI need to review
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -53,7 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.perf.gestureflingboost.enable=true \
 	sys.displayfeature_hidl=true \
 	sys.displayfeature.hbm.enable=true \
-	vendor.display.enable_default_color_mode=0 \
+	vendor.display.enable_default_color_mode=1 \
 	ro.vendor.qti.sys.fw.bservice_limit=5 \
 	ro.vendor.qti.sys.fw.bservice_age=5000 \
 	ro.cutoff_voltage_mv=3400 \
