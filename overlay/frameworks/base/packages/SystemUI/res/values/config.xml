@@ -35,4 +35,9 @@
         <item>7</item> <!-- 3: HIGH -->
         <item>7</item> <!-- 4: SUN -->
     </integer-array>
+
+    <bool name="config_show4GForLTE">true</bool>
+
+    <!-- VoLTE: Show new HD VoLTE icon  -->
+    <bool name="config_display_hd_volte">true</bool>
 </resources>
