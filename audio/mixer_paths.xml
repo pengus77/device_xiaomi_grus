@@ -306,27 +306,27 @@
     <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
     <!-- Volume controls -->
-   <ctl name="HPHL Volume" value="9" />
-   <ctl name="HPHR Volume" value="9" />
+    <ctl name="HPHL Volume" value="9" />
+    <ctl name="HPHR Volume" value="9" />
     <ctl name="EAR PA Gain" value="POS_1P5_DB" />
     <ctl name="EAR PA Boost" value="ENABLE" />
 
-   <ctl name="RX1 Digital Volume" value="12" />
-   <ctl name="RX2 Digital Volume" value="12" />
+    <ctl name="RX1 Digital Volume" value="84" />
+    <ctl name="RX2 Digital Volume" value="84" />
     <ctl name="RX3 Digital Volume" value="84" />
     <ctl name="RX4 Digital Volume" value="84" />
     <ctl name="RX5 Digital Volume" value="84" />
-   <ctl name="ADC1 Volume" value="9" />
-   <ctl name="ADC2 Volume" value="9" />
-   <ctl name="ADC3 Volume" value="9" />
+    <ctl name="ADC1 Volume" value="4" />
+    <ctl name="ADC2 Volume" value="4" />
+    <ctl name="ADC3 Volume" value="4" />
     <ctl name="DEC1 Volume" value="84" />
     <ctl name="DEC2 Volume" value="84" />
     <ctl name="DEC3 Volume" value="84" />
     <ctl name="DEC4 Volume" value="84" />
 
     <!-- Compander controls -->
-   <ctl name="COMP1 Switch" value="1" />
-   <ctl name="COMP2 Switch" value="1" />
+    <ctl name="COMP1 Switch" value="1" />
+    <ctl name="COMP2 Switch" value="1" />
 
     <!-- MUX controls -->
     <ctl name="DEC1 MUX" value="ZERO" />
@@ -1217,15 +1217,15 @@
     </path>
 
     <path name="audio-record">
-        <ctl name="MultiMedia1 Mixer INT3_MI2S_TX" value="-1" />
+        <ctl name="MultiMedia1 Mixer INT3_MI2S_TX" value="1" />
     </path>
 
     <path name="audio-record usb-headset-mic">
-        <ctl name="MultiMedia1 Mixer USB_AUDIO_TX" value="-1" />
+        <ctl name="MultiMedia1 Mixer USB_AUDIO_TX" value="1" />
     </path>
 
     <path name="audio-record bt-sco">
-        <ctl name="MultiMedia1 Mixer SLIM_7_TX" value="5" />
+        <ctl name="MultiMedia1 Mixer SLIM_7_TX" value="1" />
     </path>
 
     <path name="audio-record bt-sco-wb">
@@ -1238,11 +1238,11 @@
     </path>
 
     <path name="audio-record-compress">
-        <ctl name="MultiMedia8 Mixer INT3_MI2S_TX" value="-1" />
+        <ctl name="MultiMedia8 Mixer INT3_MI2S_TX" value="1" />
     </path>
 
     <path name="audio-record-compress bt-sco">
-        <ctl name="MultiMedia8 Mixer SLIM_7_TX" value="3" />
+        <ctl name="MultiMedia8 Mixer SLIM_7_TX" value="1" />
     </path>
 
     <path name="audio-record-compress bt-sco-wb">
@@ -1251,7 +1251,7 @@
     </path>
 
     <path name="audio-record-compress usb-headset-mic">
-        <ctl name="MultiMedia8 Mixer USB_AUDIO_TX" value="-1" />
+        <ctl name="MultiMedia8 Mixer USB_AUDIO_TX" value="1" />
     </path>
 
     <path name="low-latency-record">
@@ -1430,54 +1430,54 @@
     </path>
 
    <path name="hfp-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_32" />
+        <ctl name="BT SampleRate" value="KHZ_16" />
         <path name="hfp-sco" />
    </path>
 
     <path name="hfp-sco-wb headphones">
-        <ctl name="BT SampleRate" value="KHZ_32" />
+        <ctl name="BT SampleRate" value="KHZ_16" />
         <path name="hfp-sco headphones" />
     </path>
 
     <path name="compress-voip-call">
         <ctl name="INT4_MI2S_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="3" />
+        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="1" />
     </path>
 
     <path name="compress-voip-call bt-a2dp">
         <ctl name="SLIM_7_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="3" />
+        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="1" />
     </path>
 
     <path name="compress-voip-call headphones">
         <ctl name="INT0_MI2S_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="3" />
+        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="1" />
     </path>
 
 
     <path name="compress-voip-call bt-sco">
         <ctl name="SLIM_7_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer SLIM_7_TX_Voip" value="3" />
+        <ctl name="Voip_Tx Mixer SLIM_7_TX_Voip" value="1" />
     </path>
 
     <path name="compress-voip-call bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_32" />
+        <ctl name="BT SampleRate" value="KHZ_16" />
         <path name="compress-voip-call bt-sco" />
     </path>
 
     <path name="compress-voip-call afe-proxy">
         <ctl name="AFE_PCM_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer AFE_PCM_TX_Voip" value="2" />
+        <ctl name="Voip_Tx Mixer AFE_PCM_TX_Voip" value="1" />
     </path>
 
     <path name="compress-voip-call usb-headphones">
         <ctl name="USB_AUDIO_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="2" />
+        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="1" />
     </path>
 
     <path name="compress-voip-call usb-headset">
         <ctl name="USB_AUDIO_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer USB_AUDIO_TX_Voip" value="2" />
+        <ctl name="Voip_Tx Mixer USB_AUDIO_TX_Voip" value="1" />
     </path>
 
     <path name="compress-voip-call voice-speaker-vbat">
@@ -1511,7 +1511,7 @@
     </path>
 
     <path name="voicemmode1-call bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_32" />
+        <ctl name="BT SampleRate" value="KHZ_16" />
         <path name="voicemmode1-call bt-sco" />
     </path>
 
@@ -1599,19 +1599,19 @@
 
     <!-- These are actual sound device specific mixer settings -->
     <path name="adc1">
-   <ctl name="ADC1 Volume" value="21" />
+        <ctl name="ADC1 Volume" value="6" />
         <ctl name="DEC1 MUX" value="ADC1" />
         <ctl name="ADC1_INP1 Switch" value="1" />
     </path>
 
     <path name="adc2">
-   <ctl name="ADC2 Volume" value="21" />
+        <ctl name="ADC2 Volume" value="6" />
         <ctl name="DEC1 MUX" value="ADC2" />
         <ctl name="ADC2 MUX" value="INP2" />
     </path>
 
     <path name="adc3">
-   <ctl name="ADC3 Volume" value="21" />
+        <ctl name="ADC3 Volume" value="6" />
         <ctl name="DEC1 MUX" value="ADC2" />
         <ctl name="ADC2 MUX" value="INP3" />
     </path>
@@ -1637,8 +1637,8 @@
         <ctl name="INT4_MI2S_RX Channels" value="Two" />
         <ctl name="RX4 MIX1 INP1" value="RX4" />
         <ctl name="RX5 MIX1 INP1" value="RX5" />
-   <ctl name="COMP1 Switch" value="1" />
-   <ctl name="COMP2 Switch" value="1" />
+        <ctl name="COMP1 Switch" value="1" />
+        <ctl name="COMP2 Switch" value="1" />
         <ctl name="SpkrLeft COMP Switch" value="1" />
         <ctl name="SpkrLeft BOOST Switch" value="1" />
         <ctl name="SpkrLeft VISENSE Switch" value="1" />
@@ -1652,24 +1652,24 @@
     </path>
 
     <path name="speaker-mono">
-        <ctl name="INT4_MI2S_RX Channels" value="two" />
+        <ctl name="INT4_MI2S_RX Channels" value="One" />
         <ctl name="RX4 MIX1 INP1" value="RX4" />
-   <ctl name="COMP1 Switch" value="1" />
+        <ctl name="COMP1 Switch" value="1" />
         <ctl name="SpkrLeft COMP Switch" value="1" />
-        <ctl name="SpkrLeft BOOST Switch" value="2" />
-        <ctl name="SpkrLeft VISENSE Switch" value="2" />
-        <ctl name="SpkrLeft SWR DAC_Port Switch" value="2" />
+        <ctl name="SpkrLeft BOOST Switch" value="1" />
+        <ctl name="SpkrLeft VISENSE Switch" value="1" />
+        <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
         <ctl name="SpkrLeft WSA PA Mute" value="0" />
     </path>
 
     <path name="speaker-mono-2">
-        <ctl name="INT4_MI2S_RX Channels" value="two" />
+        <ctl name="INT4_MI2S_RX Channels" value="One" />
         <ctl name="RX5 MIX1 INP1" value="RX4" />
-   <ctl name="COMP2 Switch" value="1" />
+        <ctl name="COMP2 Switch" value="1" />
         <ctl name="SpkrRight COMP Switch" value="1" />
-        <ctl name="SpkrRight BOOST Switch" value="2" />
-        <ctl name="SpkrRight VISENSE Switch" value="2" />
-        <ctl name="SpkrRight SWR DAC_Port Switch" value="2" />
+        <ctl name="SpkrRight BOOST Switch" value="1" />
+        <ctl name="SpkrRight VISENSE Switch" value="1" />
+        <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
         <ctl name="SpkrRight WSA PA Mute" value="0" />
     </path>
 
@@ -1727,24 +1727,24 @@
     </path>
 
     <path name="speaker-protected">
-        <ctl name="AIF1_VI_SDW Mixer SPKR_VI_1" value="3" />
-        <ctl name="AIF1_VI_SDW Mixer SPKR_VI_2" value="3" />
+        <ctl name="AIF1_VI_SDW Mixer SPKR_VI_1" value="1" />
+        <ctl name="AIF1_VI_SDW Mixer SPKR_VI_2" value="1" />
         <path name="speaker" />
         <ctl name="VI_FEED_TX Channels" value="Two" />
         <ctl name="INT4_MI2S_RX_VI_FB_STEREO_CH_MUX" value="INT5_MI2S_TX" />
     </path>
 
     <path name="voice-speaker-protected">
-        <ctl name="AIF1_VI_SDW Mixer SPKR_VI_1" value="4" />
+        <ctl name="AIF1_VI_SDW Mixer SPKR_VI_1" value="1" />
         <path name="speaker-mono" />
-        <ctl name="VI_FEED_TX Channels" value="four" />
+        <ctl name="VI_FEED_TX Channels" value="One" />
         <ctl name="INT4_MI2S_RX_VI_FB_MONO_CH_MUX" value="INT5_MI2S_TX" />
     </path>
 
     <path name="voice-speaker-2-protected">
-        <ctl name="AIF1_VI_SDW Mixer SPKR_VI_2" value="4" />
+        <ctl name="AIF1_VI_SDW Mixer SPKR_VI_2" value="1" />
         <path name="speaker-mono-2" />
-        <ctl name="VI_FEED_TX Channels" value="four" />
+        <ctl name="VI_FEED_TX Channels" value="One" />
         <ctl name="INT4_MI2S_RX_VI_FB_MONO_CH_MUX" value="INT5_MI2S_TX" />
         <ctl name="INT5 MI2S VI MONO" value="Right" />
     </path>
