@@ -99,6 +99,11 @@ PRODUCT_PACKAGES += \
     tinymix \
     libaudio_log_utils
 
+# JamesDSPManager
+PRODUCT_PACKAGES += \
+    JamesDSPManager \
+    libjamesDSPImpulseToolbox \
+    libjamesdsp
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
