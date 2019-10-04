@@ -36,4 +36,7 @@
 
      <string name="bt_starts_player_title">BT Headset starts Music Player</string>
      <string name="bt_starts_player_summary">Start Music Player when a BT Headset is connected</string>
+
+     <string name="silent_screenshot_title">Silent Screenshot</string>
+     <string name="silent_screenshot_summary">Be silent when taking a screenshot</string>
 </resources>

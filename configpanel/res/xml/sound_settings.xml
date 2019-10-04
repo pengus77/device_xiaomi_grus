@@ -25,5 +25,10 @@
           android:key="bt_starts_music_player"
           android:title="@string/bt_starts_player_title"
           android:summary="@string/bt_starts_player_summary" />
+     
+     <SwitchPreference
+          android:key="silent_screenshot"
+          android:title="@string/silent_screenshot_title"
+          android:summary="@string/silent_screenshot_summary" />
 
 </PreferenceScreen>

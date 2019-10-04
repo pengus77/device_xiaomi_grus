@@ -63,8 +63,10 @@ public class SoundSettingsFragment extends PreferenceFragment
     @Override
     public void addPreferencesFromResource(int preferencesResId) {
         super.addPreferencesFromResource(preferencesResId);
+
         this.addPreference(Settings.Secure.HEADSET_STARTS_MUSIC_PLAYER);
         this.addPreference(Settings.Secure.BT_STARTS_MUSIC_PLAYER);
+        this.addPreference(Settings.Secure.SILENT_SCREENSHOT);
     }
 
     private void addPreference(String pref) {
