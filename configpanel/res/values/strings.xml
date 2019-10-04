@@ -16,9 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-     <!-- Global -->
-     <string name="summary_empty"></string>
-
      <!-- Display -->
      <string name="flicker_free_settings_title">Display Extra</string>
      <string name="flicker_free_settings_summary">Extra settings for display/graphics</string>
@@ -34,6 +31,9 @@
      <string name="sound_settings_title">Sound Extra</string>
      <string name="sound_settings_summary">Extra settings for sound/music</string>
 
-     <string name="headset_starts_player_title">Autostart Music Player</string>
-     <string name="headset_starts_player_summary">Start Music Player when Headset is connected</string>
+     <string name="headset_starts_player_title">Headset starts Music Player</string>
+     <string name="headset_starts_player_summary">Start Music Player when a wired Headset is connected</string>
+
+     <string name="bt_starts_player_title">BT Headset starts Music Player</string>
+     <string name="bt_starts_player_summary">Start Music Player when a BT Headset is connected</string>
 </resources>

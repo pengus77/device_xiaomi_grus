@@ -20,5 +20,10 @@
           android:key="headset_starts_music_player"
           android:title="@string/headset_starts_player_title"
           android:summary="@string/headset_starts_player_summary" />
+     
+     <SwitchPreference
+          android:key="bt_starts_music_player"
+          android:title="@string/bt_starts_player_title"
+          android:summary="@string/bt_starts_player_summary" />
 
 </PreferenceScreen>

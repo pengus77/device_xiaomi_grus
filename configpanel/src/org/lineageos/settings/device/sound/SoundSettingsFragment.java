@@ -52,22 +52,26 @@ public class SoundSettingsFragment extends PreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        Log.i(TAG, "Switched " + preference.getKey() + " to " + (Boolean)newValue);
+        String pref = preference.getKey();
         boolean res = (Boolean)newValue;
         int p = res ? 1 : 0;
         Settings.Secure.putIntForUser(mContext.getContentResolver(),
-            Settings.Secure.HEADSET_STARTS_MUSIC_PLAYER, p, UserHandle.USER_CURRENT);
+            pref, p, UserHandle.USER_CURRENT);
         return true;
     }
 
     @Override
     public void addPreferencesFromResource(int preferencesResId) {
         super.addPreferencesFromResource(preferencesResId);
+        this.addPreference(Settings.Secure.HEADSET_STARTS_MUSIC_PLAYER);
+        this.addPreference(Settings.Secure.BT_STARTS_MUSIC_PLAYER);
+    }
 
-        SwitchPreference b = (SwitchPreference) findPreference(Settings.Secure.HEADSET_STARTS_MUSIC_PLAYER);
+    private void addPreference(String pref) {
+        SwitchPreference b = (SwitchPreference) findPreference(pref);
         if (b == null) return;
         boolean res = Settings.Secure.getIntForUser(mContext.getContentResolver(),
-            Settings.Secure.HEADSET_STARTS_MUSIC_PLAYER, 0, UserHandle.USER_CURRENT) != 0;
+            pref, 0, UserHandle.USER_CURRENT) != 0;
         b.setChecked(res);
         b.setOnPreferenceChangeListener(this);
     }
