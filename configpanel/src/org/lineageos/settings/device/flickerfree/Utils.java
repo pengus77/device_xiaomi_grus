@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings.device.flickerfree;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -27,7 +27,7 @@ import org.lineageos.settings.device.utils.FileUtils;
 
 public class Utils {
 
-    private static final String TAG = "FlickerFree - Utils";
+    private static final String TAG = "Kowalski OS";
 
     protected static void disableComponent(Context context, Class cls) {
         ComponentName name = new ComponentName(context, cls);
@@ -56,7 +56,7 @@ public class Utils {
         return String.valueOf(preferences.getInt(key, (Integer)Constants.sNodeDefaultMap.get(key)));
     }
 
-    protected static void restoreNodePrefs(Context context) {
+    public static void restoreNodePrefs(Context context) {
         String value, node;
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         for (String pref : Constants.sFlickerFreePrefKeys) {

@@ -14,24 +14,14 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings.device.sound;
 
 import android.app.ActionBar;
 import android.content.Context;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
-public class FlickerFreeSettingsActivity extends PreferenceActivity {
-
-    protected static boolean restoreState(Context context) {
-        boolean enabled = FlickerFreeUtils.isSupported();
-        if (enabled) {
-            Utils.enableComponent(context, FlickerFreeSettingsActivity.class);
-        } else {
-            Utils.disableComponent(context, FlickerFreeSettingsActivity.class);
-        }
-        return enabled;
-    }
+public class SoundSettingsActivity extends PreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +32,7 @@ public class FlickerFreeSettingsActivity extends PreferenceActivity {
             actionBar.setHomeButtonEnabled(true);
         }
         getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new FlickerFreeSettingsFragment()).commit();
+                new SoundSettingsFragment()).commit();
     }
 
 }

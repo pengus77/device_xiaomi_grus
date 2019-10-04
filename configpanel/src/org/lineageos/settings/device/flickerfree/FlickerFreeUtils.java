@@ -14,15 +14,14 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings.device.flickerfree;
 
-import android.os.Bundle;
+import org.lineageos.settings.device.utils.FileUtils;
 
-public class FlickerFreeSettingsFragment extends NodePreferenceFragment {
+public class FlickerFreeUtils {
 
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.flicker_free_settings);
+    static boolean isSupported() {
+        return FileUtils.fileExists(FlickerFreeConstants.FLICKER_FREE_NODE);
     }
 
 }

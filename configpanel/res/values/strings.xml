@@ -16,13 +16,24 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-     <!-- Flicker Free -->
-     <string name="flicker_free_settings_title">Flicker Free</string>
-     <string name="flicker_free_settings_summary">Avoid screen flicker on low brightness</string>
-     <string name="flicker_free_toggle_title">Avoid screen flicker on low brightness</string>
+     <!-- Global -->
+     <string name="summary_empty"></string>
+
+     <!-- Display -->
+     <string name="flicker_free_settings_title">Display Extra</string>
+     <string name="flicker_free_settings_summary">Extra settings for display/graphics</string>
+
+     <string name="flicker_free_toggle_title">Flicker Free</string>
      <string name="flicker_free_toggle_summary">May reduce image quality</string>
-     <string name="flicker_free_toggle_bri_title">Minimum brightness threshold</string>
+     <string name="flicker_free_toggle_bri_title">Flicker Free threshold</string>
      <string name="flicker_free_toggle_bri_summary">Minimum brightness level below which the system will be enabled</string>
-     <string name="flicker_free_toggle_exp_title">Exposure multiplier</string>
+     <string name="flicker_free_toggle_exp_title">Flicker Free exposure multiplier</string>
      <string name="flicker_free_toggle_exp_summary">The multiplier used to calculate the new exposure on low brightness</string>
+
+     <!-- Sound -->
+     <string name="sound_settings_title">Sound Extra</string>
+     <string name="sound_settings_summary">Extra settings for sound/music</string>
+
+     <string name="headset_starts_player_title">Autostart Music Player</string>
+     <string name="headset_starts_player_summary">Start Music Player when Headset is connected</string>
 </resources>

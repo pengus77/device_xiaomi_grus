@@ -27,7 +27,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public final class FileUtils {
-    private static final String TAG = "FlickerFree - FileUtils";
+    private static final String TAG = "Kowalski OS";
 
     private FileUtils() {
         // This class is not supposed to be instantiated
