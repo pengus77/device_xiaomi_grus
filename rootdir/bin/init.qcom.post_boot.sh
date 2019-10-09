@@ -2737,12 +2737,12 @@ case "$target" in
       # configure governor settings for little cluster
       echo "blu_schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
       echo 1209600 > /sys/devices/system/cpu/cpu0/cpufreq/blu_schedutil/hispeed_freq
-      echo 576000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+      echo 748800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
       # configure governor settings for big cluster
       echo "blu_schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
       echo 1344000 > /sys/devices/system/cpu/cpu6/cpufreq/blu_schedutil/hispeed_freq
-      echo 300000 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
+      echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
 
       # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
       echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
