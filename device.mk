@@ -492,3 +492,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OmniSwitch
 
+# Tether Offload
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.control-V1.0-java
+
+

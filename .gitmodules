@@ -1,4 +1,0 @@
-[submodule "data-ipa-cfg-mgr"]
-	path = data-ipa-cfg-mgr
-	url = ssh://git@github.com:pengus77/data-ipa-cfg-mgr.git
-	branch = data.lnx.4.0.r19-rel
