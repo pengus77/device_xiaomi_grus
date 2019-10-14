@@ -232,7 +232,7 @@
 
          Refer to power.h for details.
     -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
@@ -1165,4 +1165,22 @@
 
     <!-- Whether or not to show the expand button at the end of the notification header. -->
     <bool name="config_showNotificationExpandButtonAtEnd">true</bool>
+
+    <!-- Display mode remapping table.
+         If the mode names returned by the backend do not match
+         the predefined and translated strings in the Settings
+         app, they can be remapped here. The format is
+         "oldname:newname", one per entry. -->
+    <string-array name="config_displayModeMappings" translatable="false">
+        <item>OLED_native:standard</item>
+        <item>38oled_native:standard</item>
+        <item>00default:dynamic</item>
+        <item>sRGB_d65:srgb</item>
+        <item>srgb_d65:srgb</item>
+    </string-array>
+
+    <!-- Should we filter any display modes which are unampped? -->
+    <bool name="config_filterDisplayModes">true</bool><!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->	
+
+    <bool translatable="false" name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">true</bool>    
 </resources>
