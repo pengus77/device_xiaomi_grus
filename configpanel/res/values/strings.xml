@@ -50,6 +50,6 @@
      <string name="wifi_actions_2g_title">Switch to 2G</string>
      <string name="wifi_actions_2g_summary">Switch to 2G when wifi connects</string>
 
-     <string name="wifi_actions_2g_title">Disable mobile data</string>
-     <string name="wifi_actions_2g_summary">Disable mobile data when wifi connects</string>
+     <string name="wifi_actions_mobile_data_title">Disable mobile data</string>
+     <string name="wifi_actions_mobile_data_summary">Disable mobile data when wifi connects</string>
 </resources>
