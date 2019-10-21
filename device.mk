@@ -480,11 +480,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     qti-telephony-common
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library
-
 # Config panel
 PRODUCT_PACKAGES += \
     ConfigPanel
@@ -497,4 +492,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.control-V1.0-java
 
-
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiParts
