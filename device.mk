@@ -492,6 +492,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.control-V1.0-java
 
-# Doze
-PRODUCT_PACKAGES += \
-    XiaomiParts
