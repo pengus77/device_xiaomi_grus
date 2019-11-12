@@ -244,8 +244,8 @@ function configure_zram_parameters() {
         elif [ $MemTotal -le 1048576 ]; then
             echo 805306368 > /sys/block/zram0/disksize
         else
-            # Set Zram disk size=1GB for >=2GB Non-Go targets.
-            echo 1073741824 > /sys/block/zram0/disksize
+            # Set Zram disk size=1.5GB for >=2GB Non-Go targets.
+            echo 1585446912 > /sys/block/zram0/disksize
         fi
         mkswap /dev/block/zram0
         swapon /dev/block/zram0 -p 32758
@@ -2735,14 +2735,20 @@ case "$target" in
       echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
       # configure governor settings for little cluster
-      echo "blu_schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-      echo 1209600 > /sys/devices/system/cpu/cpu0/cpufreq/blu_schedutil/hispeed_freq
+      echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+      echo 1209600 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
       echo 748800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+      echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/iowait_boost_enable
+      echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl
 
       # configure governor settings for big cluster
-      echo "blu_schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-      echo 1344000 > /sys/devices/system/cpu/cpu6/cpufreq/blu_schedutil/hispeed_freq
+      echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
+      echo 1344000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
       echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
+      echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/iowait_boost_enable
+      echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl
+
+      echo 95 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
 
       # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
       echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
