@@ -111,9 +111,6 @@ TARGET_TS_MAKEUP := false
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
