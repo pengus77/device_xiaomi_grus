@@ -1133,4 +1133,5 @@
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 
     <bool name="config_ui_enableFadingMarquee">false</bool>
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
 </resources>
