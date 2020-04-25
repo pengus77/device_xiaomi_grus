@@ -547,3 +547,5 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.qti
 
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
