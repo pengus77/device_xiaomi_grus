@@ -554,4 +554,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SimpleGalleryPro \
     SimpleCalculator \
-    bromite-webview
+    bromite-webview \
+    DuckDuckGo
