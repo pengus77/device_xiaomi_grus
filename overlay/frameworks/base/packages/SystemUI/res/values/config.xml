@@ -52,4 +52,8 @@
 
     <!-- VoLTE: Show new HD VoLTE icon  -->
     <bool name="config_display_hd_volte">true</bool>
+
+    <integer name="config_maxVisibleNotificationIcons">6</integer>
+    <integer name="config_maxVisibleNotificationIconsOnLock">6</integer>
+    <integer name="config_maxVisibleStatusIconContainer">7</integer>
 </resources>
