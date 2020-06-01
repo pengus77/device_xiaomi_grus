@@ -534,10 +534,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.xiaomi
 
-# Config panel
-PRODUCT_PACKAGES += \
-    ConfigPanel
-
 # Xiaomi Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
