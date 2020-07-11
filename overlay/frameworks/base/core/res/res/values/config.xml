@@ -1140,5 +1140,6 @@
     <string name="config_sysGPULoad">/sys/kernel/gpu/gpu_busy</string>
     <integer name="config_sysCPUTempMultiplier">10000</integer>
     <integer name="config_sysBatteryTempMultiplier">10</integer>
+    <bool name="config_hasVowifi">true</bool>
 
 </resources>
