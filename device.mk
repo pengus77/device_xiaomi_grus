@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.7.vendor \
     vendor.display.config@1.7 \
     vendor.qti.hardware.display.allocator@1.0-service \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
     libsdm-disp-vndapis
 
 # DRM
