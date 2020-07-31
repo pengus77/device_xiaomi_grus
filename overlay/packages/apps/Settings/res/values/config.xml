@@ -37,4 +37,10 @@
     <string name="bliss_maintainer">pengus77</string>
 
     <string name="config_customDozePackage">com.custom.ambient.display/com.custom.ambient.display.DozeSettings</string>
+
+    <!-- Battery Health -->
+    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
+    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
+    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
+    <bool name="config_supportBatteryHealth">true</bool>
 </resources>
