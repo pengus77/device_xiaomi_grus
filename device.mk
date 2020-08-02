@@ -515,6 +515,13 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    BluetoothResCommon \
+    libbthost_if \
+    libldacBT_enc \
+    libldacBT_abr \
+    hwaddrs \
+    libbt-vendor \
+    libbtconfigstore \
     vendor.qti.hardware.btconfigstore@1.0.vendor 
 
 # qti telephony
