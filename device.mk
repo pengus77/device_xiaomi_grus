@@ -520,7 +520,9 @@ PRODUCT_PACKAGES += \
     libldacBT_enc \
     libldacBT_abr \
     hwaddrs \
-    libbt-vendor
+    libbt-vendor \
+    libbtconfigstore \
+    vendor.qti.hardware.btconfigstore@1.0.vendor 
 
 # qti telephony
 PRODUCT_PACKAGES += \
