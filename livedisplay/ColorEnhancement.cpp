@@ -66,7 +66,7 @@ Return<bool> ColorEnhancement::isEnabled() {
 }
 
 Return<bool> ColorEnhancement::setEnabled(bool enabled) {
-    unsigned int modeID = enabled ? VIVID : STANDARD;
+    // unsigned int modeID = enabled ? VIVID : STANDARD;
 
 //    if (ioctl(mFbDevFd, MSMFB_ENHANCE_SET_CE, &modeID) != 0) {
         LOG(ERROR) << "failed to set color enhance";
