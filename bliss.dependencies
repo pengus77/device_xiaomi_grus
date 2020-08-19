@@ -8,7 +8,7 @@
   {
     "repository": "pengus77/vendor_xiaomi_grus",
     "target_path": "vendor/xiaomi/grus",
-    "revision": "q",
+    "revision": "12.0.1.0",
     "remote": "github"
   }
 ]
