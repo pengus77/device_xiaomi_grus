@@ -21,13 +21,15 @@ $(call inherit-product, $(LOCAL_PATH)/audio/sdm710.mk)
 # setupe dalvik vm properties
 $(call inherit-product, $(LOCAL_PATH)/configs/phone-xhdpi-6144-dalvik-heap.mk)
 
+PRODUCT_SOONG_NAMESPACES += device/xiaomi/grus
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+# DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
+#PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+#    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
@@ -81,8 +83,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    vendor/bliss/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml 
+    # vendor/bliss/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
@@ -263,10 +265,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1 \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus \
-    vendor.xiaomi.hardware.fingerprintextension@1.0
+# PRODUCT_PACKAGES += \
+#     android.hardware.biometrics.fingerprint@2.1 \
+#     lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus \
+#     vendor.xiaomi.hardware.fingerprintextension@1.0
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -442,8 +444,8 @@ PRODUCT_PACKAGES += \
     libtinyxml2
 
 # Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
+# PRODUCT_PACKAGES += \
+#     lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
@@ -537,8 +539,8 @@ PRODUCT_PACKAGES += \
     AntHalService
 
 # Display calibration
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.xiaomi
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.livedisplay@2.0-service.xiaomi
 
 # vndfwk
 PRODUCT_PACKAGES += \

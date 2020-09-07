@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/bliss_grus.mk
+	$(LOCAL_DIR)/aosp_grus.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_grus-userdebug 
+    aosp_grus-userdebug 

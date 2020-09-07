@@ -18,7 +18,8 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := kryo300
+# TARGET_CPU_VARIANT := kryo300
+TARGET_CPU_VARIANT := cortex-a55
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
@@ -120,6 +121,8 @@ TARGET_USE_QTI_BT_STACK := true
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_USES_EASEL := true
+BOARD_USES_EASEL := true
 
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -244,7 +247,7 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 
 # Ignore SELinux neverallows
 SELINUX_IGNORE_NEVERALLOWS := true
