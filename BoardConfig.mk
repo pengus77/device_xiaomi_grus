@@ -7,6 +7,7 @@
 BOARD_VENDOR := xiaomi
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 DEVICE_PATH := device/xiaomi/grus
 
@@ -41,6 +42,8 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 
 BOARD_KERNEL_SEPARATED_DTBO := true
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := grus
 
@@ -60,6 +63,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := kowalski_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/grus
+TARGET_NO_KERNEL := false
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -193,7 +197,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 LOC_HIDL_VERSION := 3.0
 
 # FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.xiaomi_grus
+# TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.xiaomi_grus
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
@@ -244,10 +248,11 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-#include device/qcom/sepolicy/sepolicy.mk
+# BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+# BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+# BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+# include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
 
 # Ignore SELinux neverallows
 SELINUX_IGNORE_NEVERALLOWS := true
