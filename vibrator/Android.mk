@@ -12,9 +12,7 @@ LOCAL_SRC_FILES := \
 
 LOCAL_SHARED_LIBRARIES := \
     libhidlbase \
-    libhidltransport \
     liblog \
-    libhwbinder \
     libutils \
     libhardware \
     android.hardware.vibrator@1.0 \
