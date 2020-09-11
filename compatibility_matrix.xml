@@ -97,9 +97,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <vendor-ndk>
-        <version>S</version>
+        <version>30</version>
     </vendor-ndk>
     <system-sdk>
-        <version>S</version>
+        <version>30</version>
     </system-sdk>
 </compatibility-matrix>
