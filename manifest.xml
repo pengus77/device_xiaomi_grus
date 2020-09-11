@@ -369,7 +369,7 @@
         </interface>
         <fqname>@1.3::IVibrator/default</fqname>
     </hal>
-    <hal format="hidl">
+    <!--hal format="hidl">
         <name>android.hardware.wifi</name>
         <transport>hwbinder</transport>
         <version>1.3</version>
@@ -378,8 +378,8 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.3::IWifi/default</fqname>
-    </hal>
-    <hal format="hidl">
+    </hal-->
+    <!--hal format="hidl">
         <name>android.hardware.wifi.hostapd</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -388,8 +388,8 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IHostapd/default</fqname>
-    </hal>
-    <hal format="hidl">
+    </hal-->
+    <!--hal format="hidl">
         <name>android.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
@@ -398,7 +398,7 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.2::ISupplicant/default</fqname>
-    </hal>
+    </hal-->
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
         <transport>hwbinder</transport>
