@@ -270,13 +270,6 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0_system \
     android.hidl.manager@1.0-java
 
-# IFAA manager
-PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
-
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -285,9 +278,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Input
@@ -487,9 +477,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Input
 PRODUCT_COPY_FILES += \
