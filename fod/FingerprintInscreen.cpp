@@ -66,9 +66,8 @@ namespace inscreen {
 namespace V1_0 {
 namespace implementation {
 
-/*  
+/* 
     map the polynomial function here based on the discovered points
-
     ALPHA = 1.0 | BRIGHTNESS = 0
     ALPHA = 0.7 | BRIGHTNESS = 150
     ALPHA = 0.5 | BRIGHTNESS = 475
@@ -84,7 +83,6 @@ float q1 = 58.82;
 
 FingerprintInscreen::FingerprintInscreen() {
     xiaomiFingerprintService = IXiaomiFingerprint::getService();
-    this->mPressed = false;
 }
 
 Return<int32_t> FingerprintInscreen::getPositionX() {
@@ -108,20 +106,14 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
-    if (!this->mPressed) {
-        set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_HBM);
-        xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
-	this->mPressed = true;
-    }
+    set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_HBM);
+    xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
-    if (this->mPressed) {
-        set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_RESET);
-        xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
-	this->mPressed = false;
-    }
+    set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_RESET);
+    xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return Void();
 }
 
