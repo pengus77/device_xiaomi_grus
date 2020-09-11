@@ -1,5 +1,4 @@
 lib64/com.qualcomm.qti.imscmservice@1.0.so
-lib64/libqti_vndfwk_detect.so
 lib64/libwfdnative.so
 vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
 lib64/vendor.qti.imsrtpservice@2.1.so
@@ -135,7 +134,6 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
-vendor/lib64/libqti_vndfwk_detect.so
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libApeSwDec.so
@@ -831,7 +829,6 @@ vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib/libdrmfs.so
 vendor/lib/vendor.qti.data.factory@2.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
-vendor/lib/libqti_vndfwk_detect.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libApeSwDec.so
@@ -1366,7 +1363,6 @@ etc/dpm/dpm.conf
 -priv-app/ims/ims.apk
 lib/libwfdmmsrc_system.so
 lib/com.qualcomm.qti.imscmservice@1.0.so
-lib/libqti_vndfwk_detect.so
 vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
 lib/vendor.qti.imsrtpservice@2.1.so
 lib/libwfdcommonutils.so
