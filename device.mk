@@ -21,10 +21,6 @@ $(call inherit-product, $(LOCAL_PATH)/audio/sdm710.mk)
 # setupe dalvik vm properties
 $(call inherit-product, $(LOCAL_PATH)/configs/phone-xhdpi-6144-dalvik-heap.mk)
 
-# PRODUCT_SOONG_NAMESPACES += device/xiaomi/grus
-
-PRODUCT_VENDOR_KERNEL_HEADERS := $(LOCAL_PATH)/kernel-headers
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
