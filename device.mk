@@ -109,8 +109,6 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
-    sound_trigger.primary.sdm710 \
-    audio.primary.sdm710 \
     libaudioroute \
     libhdmiedid \
     libhfp \
