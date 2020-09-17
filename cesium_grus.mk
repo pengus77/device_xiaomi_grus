@@ -35,6 +35,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=google/flame/flame:10/QQ3A.200805.001/6578210:user/release-keys
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
