@@ -558,4 +558,4 @@ PRODUCT_PACKAGES += \
 
 # DumpState
 PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.0-service-grus
+    android.hardware.dumpstate@1.1-service-grus
