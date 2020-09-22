@@ -556,3 +556,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# DumpState
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.0-service-grus
