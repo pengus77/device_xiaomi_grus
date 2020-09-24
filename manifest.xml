@@ -958,7 +958,7 @@
         <fqname>@1.0::IIWlan/slot2</fqname>
     </hal>
 
-    <!--hal format="hidl">
+    <hal format="hidl">
         <name>vendor.lineage.biometrics.fingerprint.inscreen</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -967,6 +967,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IFingerprintInscreen/default</fqname>
-    </hal-->
+    </hal>
 
 </manifest>
