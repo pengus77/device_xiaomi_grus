@@ -530,6 +530,10 @@ PRODUCT_PACKAGES += \
     libbtconfigstore \
     vendor.qti.hardware.btconfigstore@1.0.vendor 
 
+# Wifi display
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
 # qti telephony
 PRODUCT_PACKAGES += \
     qti-telephony-common
