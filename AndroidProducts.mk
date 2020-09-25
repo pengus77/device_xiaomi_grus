@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/cesium_grus.mk
+	$(LOCAL_DIR)/kowalski_grus.mk
 
 COMMON_LUNCH_CHOICES := \
-    cesium_grus-userdebug 
+    kowalski_grus-userdebug 
