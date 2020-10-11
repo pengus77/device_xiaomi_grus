@@ -103,6 +103,8 @@ on post-fs-data
     mkdir /data/vendor/misc/display 0771 system system
     chmod 666 /sys/class/drm/card0-DSI-1/disp_count
 
+    mkdir /data/vendor/nfc 0770 nfc nfc
+
 #add charge_logger service for dump charge message
 service charge_logger /vendor/bin/charge_logger
     class last_start
