@@ -506,7 +506,8 @@ PRODUCT_PACKAGES += \
     NfcNci \
     SecureElement \
     Tag \
-    android.hardware.nfc@1.2-service
+    android.hardware.nfc@1.2-service \
+    android.hardware.secure_element@1.1-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
