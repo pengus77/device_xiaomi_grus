@@ -34,6 +34,7 @@ TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 TARGET_BOOT_ANIMATION_RES := 2280
+TARGET_HAS_PERSISTENT_RECOVERY := true
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -497,10 +498,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     $(LOCAL_PATH)/idc/qwerty2.idc:system/usr/idc/qwerty2.idc
-
-# NFC
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/pn5xx
 
 PRODUCT_PACKAGES += \
     NfcNci \
