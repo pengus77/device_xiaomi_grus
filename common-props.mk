@@ -17,6 +17,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=true \
     persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.eis.enable=1 \
+    persist.camera.facepp.fdenable=0 \
     vendor.camera.aux.packagelist=com.google.android.GoogleCamera,org.codeaurora.snapcam,com.android.camera \
     vendor.camera.aux.packagelist.ext=,com.xiaomi.biometric,com.xiaomi.biometric.haldemo,com.xiaomi.factory.mmi
 
