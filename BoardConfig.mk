@@ -197,7 +197,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 LOC_HIDL_VERSION := 3.0
 
 # FOD
-# TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.xiaomi_grus
+TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.xiaomi_grus
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
