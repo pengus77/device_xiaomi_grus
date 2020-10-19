@@ -44,4 +44,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
     debug.stagefright.omx_default_rank=0 \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxws-aptxhd-aac-ldac-aptxadaptive \
-    vendor.display.enable_default_color_mode=1
+    vendor.display.enable_default_color_mode=1 \
+    debug.hwui.renderer=skiavk
