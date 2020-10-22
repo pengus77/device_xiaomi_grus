@@ -23,11 +23,8 @@ $(call inherit-product, $(LOCAL_PATH)/configs/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-# DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-#PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-#    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
