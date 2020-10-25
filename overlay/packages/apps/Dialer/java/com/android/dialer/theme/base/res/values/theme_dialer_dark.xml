@@ -33,8 +33,8 @@
   <!-- Activities and Applications should inherit from one of the themes above. -->
   <style name="Dialer.Dark.ThemeBase">
     <!-- These values should be used to color all backgrounds. -->
-    <item name="android:colorBackground">@*android:color/primary_dark_device_default_settings</item>
-    <item name="android:colorBackgroundFloating">@*android:color/primary_dark_device_default_settings</item>
+    <item name="android:colorBackground">#000000</item>
+    <item name="android:colorBackgroundFloating">#000000</item>
 
     <!-- These values should be used to set text color. -->
     <!-- swap text colors. -->
@@ -45,10 +45,10 @@
     <item name="android:textColorHint">@color/google_grey_600</item>
 
     <!-- These will be automatically used to color most Appcompat/Material widgets. -->
-    <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
-    <item name="colorPrimary">@*android:color/primary_dark_device_default_settings</item>
-    <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
-    <item name="colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
+    <item name="android:colorPrimary">#000000</item>
+    <item name="colorPrimary">#000000</item>
+    <item name="android:colorPrimaryDark">#000000</item>
+    <item name="colorPrimaryDark">#000000</item>
     <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
     <item name="colorAccent">@*android:color/accent_device_default_light</item>
 
