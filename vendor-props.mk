@@ -46,4 +46,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.renderer=skiavk \
     ro.hwui.use_vulkan=true \
     ro.hwui.render_ahead=1 \
-    ro.charger.enable_suspend=true
+    ro.charger.enable_suspend=true \
+    vendor.camera.hal1.packagelist=com.instagram.android,com.whatsapp,com.skype.raider
