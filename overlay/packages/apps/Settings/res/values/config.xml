@@ -44,4 +44,8 @@
     <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
     <bool name="config_supportBatteryHealth">true</bool>
     <bool name="config_showChargingCycles">false</bool> 
+
+    <string name="config_backup_settings_intent">settings://com.android.settings.backup.transport</string>
+    <string name="config_backup_settings_label">Backup Transport</string>
+
 </resources>
