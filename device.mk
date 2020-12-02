@@ -535,10 +535,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AntHalService
 
-# Display calibration
-# PRODUCT_PACKAGES += \
-#     vendor.lineage.livedisplay@2.0-service.xiaomi
-
 # vndfwk
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
@@ -552,6 +548,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages 
 
-# DumpState
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1-service-grus
