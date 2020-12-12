@@ -3,12 +3,12 @@
 <resources>
 
     <array name="config_doze_brightness_sensor_to_brightness">
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
+        <item>-1</item>
+        <item>2</item>
+        <item>8</item>
+        <item>20</item>
+        <item>45</item>
+        <item>70</item>
     </array>
 
     <array name="config_doze_brightness_sensor_to_scrim_opacity">
