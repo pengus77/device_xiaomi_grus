@@ -12,7 +12,7 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 DEVICE_PATH := device/xiaomi/grus
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2020-09-01
+VENDOR_SECURITY_PATCH := 2020-12-01
 
 # Architecture
 TARGET_ARCH := arm64
