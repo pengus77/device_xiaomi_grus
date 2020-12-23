@@ -1150,4 +1150,7 @@
     </string-array>
 
     <bool name="config_cleanupUnusedFingerprints">false</bool>
+
+    <!-- Whether to allow process with media UID to access CameraServiceProxy -->
+    <bool name="config_allowMediaUidForCameraServiceProxy">true</bool>
 </resources>
