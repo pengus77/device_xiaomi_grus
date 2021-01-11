@@ -57,24 +57,10 @@ echo 140 > /proc/sys/kernel/sched_group_upmigrate
 echo 120 > /proc/sys/kernel/sched_group_downmigrate
 echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
-# configure governor settings for little cluster
-#echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-#echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rate_limit_us
-#echo 1209600 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-#echo 576000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-# configure governor settings for big cluster
-#echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-#echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/rate_limit_us
-#echo 1344000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
-#echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
-
 # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
 echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
 echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
 echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
-
-echo "0:1209600" > /sys/module/cpu_boost/parameters/input_boost_freq
-echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
 # Set Memory parameters
 # configure_memory_parameters
@@ -130,19 +116,11 @@ echo N > /sys/module/lpm_levels/L3/cpu5/ret/idle_enabled
 echo N > /sys/module/lpm_levels/L3/cpu6/ret/idle_enabled
 echo N > /sys/module/lpm_levels/L3/cpu7/ret/idle_enabled
 
-# cpuset parameters
-#echo 0-5 > /dev/cpuset/background/cpus
-#echo 0-5 > /dev/cpuset/system-background/cpus
-echo 0-1 > /dev/cpuset/background/cpus
-echo 0-2 > /dev/cpuset/system-background/cpus
-echo 0-3 > /dev/cpuset/restricted/cpus
-
 # Turn off scheduler boost at the end
 echo 0 > /proc/sys/kernel/sched_boost
 
 # Turn on sleep modes.
 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
-
 
 cpuA=/sys/devices/system/cpu/cpufreq/policy0
 cpuB=/sys/devices/system/cpu/cpufreq/policy6
