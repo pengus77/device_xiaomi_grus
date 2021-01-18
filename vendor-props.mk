@@ -69,4 +69,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=0 \
     sdm.debug.disable_skip_validate=1 \
     vendor.display.disable_skip_validate=1 \
-    vendor.gralloc.enable_fb_ubwc=1 
+    vendor.gralloc.enable_fb_ubwc=1 \
+    ro.surface_flinger.supports_background_blur=1 \
+    ro.sf.blurs_are_expensive=1
