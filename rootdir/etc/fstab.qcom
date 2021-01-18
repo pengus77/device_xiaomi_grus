@@ -24,7 +24,3 @@
 # and fails if it does not find it.
 /dev/block/bootdevice/by-name/misc                      /misc              emmc    defaults                                             defaults
 /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.*.auto*     /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
-
-/dev/block/bootdevice/by-name/misc                      /misc                    emmc    defaults                                                                                         defaults
-/dev/block/bootdevice/by-name/boot                      /boot                    emmc    defaults                                                                                         defaults
-/dev/block/bootdevice/by-name/recovery                  /recovery   
